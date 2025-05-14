@@ -1,32 +1,113 @@
-    <link rel="stylesheet" type="text/css" href="style.css" />
-
-
 <!doctype html>
 <html>
 <head>
-<meta charset="utf-8">
-<title></title>
-<link rel="stylesheet" type="text/css" href="style.css" />
-
+  <meta charset="utf-8">
+  <title>Nafis Haider</title>
+  <link rel="stylesheet" type="text/css" href="style.css" />
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      height: 100vh;
+      background: url(https://images.pexels.com/photos/273230/pexels-photo-273230.jpeg) no-repeat;
+      background-size: cover;
+    }
+    .box {
+      width: 450px;
+      background: rgba(0,0,0,0.8);
+      padding: 40px;
+      text-align: center;
+      margin: auto;
+      margin-top: 5%;
+      color: #ffffff;
+      font-family: 'Century Gothic', sans-serif;
+    }
+    .box-img {
+      border: 4px dashed #ffffff;
+      border-radius: 50%;
+      width: 150px;
+      height: 150px;
+      background-color: #ffffff;
+    }
+    .box h1 {
+      font-size: 40px;
+      letter-spacing: 4px;
+      font-weight: 100;
+      margin-bottom: 0px;
+    }
+    .animated-text span {
+      display: inline-block;
+    }
+    .box h5 {
+      font-size: 20px;
+      letter-spacing: 3px;
+      font-weight: 100;
+      margin-top: 0px;
+    }
+    .box p {
+      text-align: justify;
+    }
+    .box p a {
+      color: #ffffff;
+      text-decoration: none;
+      font-style: italic;
+    }
+    ul {
+      margin: 0;
+      padding: 0;
+    }
+    .box li {
+      display: inline-block;
+      margin: 6px;
+      list-style: none;
+    }
+    .box li a {
+      color: #ffffff;
+      text-decoration: none;
+      font-size: 30px;
+      transition: all ease-in-out 250ms;
+    }
+    .box li a:hover {
+      color: #b9b9b9;
+    }
+  </style>
 </head>
 
 <body>
   <div class="box">
-    <img src="https://media.licdn.com/dms/image/v2/D5603AQHwIZ1ZO4C-PA/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1730025643798?e=1738800000&v=beta&t=aJl1GJ_zOYW399pJbhtauORljRW8v7B84ZljdQeCGSE" alt="" class="box-img">
-    <h1>Nafis Haider</h1>
-    <h5>Telecommunication Project Engineer & Developer</h5>
-    <p>  Welcome to my personal website. A place to jot down my thoughts</p>
+    <img src="https://media.licdn.com/dms/image/v2/D5603AQHwIZ1ZO4C-PA/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1730025643798?e=1752710400&v=beta&t=EKubEsVJ2wDJpk25jI8FvCeO4QtP8a0Vg0cQQhTf8Lg" alt="" class="box-img">
     
-    <p>Developer, Design & implement! 
-<br />Hi! I'm Nafis, <a></p>
-    <ul>
-      <li><a href="http://www.amygrogan.com/" target="_blank"><i class="fa fa-globe"></i></a></li>
-      <li><a href="https://www.linkedin.com/in/amygrogan/" target="_blank"><i class="fa fa-linkedin-square" aria-hidden="true"></i></a></li>
-      <li><a href="https://twitter.com/designsbyamy" target="_blank"><i class="fa fa-twitter-square" aria-hidden="true"></i></a></li>
-      <li><a href="https://www.facebook.com/grogan.amy" target="_blank"><i class="fa fa-facebook-square" aria-hidden="true"></i></a></li>
-      <li><a href="https://www.instagram.com/dexigneramy/" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
-      <li><a href="https://plus.google.com/u/0/102368716416575421763/posts" target="_blank"><i class="fa fa-google-plus-square" aria-hidden="true"></i></a></li>
-    </ul>
+    <h1 class="animated-text">
+      <span>N</span><span>a</span><span>f</span><span>i</span><span>s</span> <span>H</span><span>a</span><span>i</span><span>d</span><span>e</span><span>r</span>
+    </h1>
+    
+    <h5>DevOps Enginner</h5>
+    <p>Welcome to my personal website. A place to jot down my thoughts</p>
+    <p>Developer, Design & implement! <br />Hi! I'm Nafis.</p>
   </div>
+
+  <!-- Anime.js CDN -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+
+  <!-- Animation Script -->
+  <script>
+    anime({
+      targets: '.animated-text span',
+      translateY: [
+        { value: '-2.75rem', easing: 'easeOutExpo', duration: 600 },
+        { value: 0, easing: 'easeOutBounce', duration: 800, delay: 100 }
+      ],
+      rotate: {
+        value: '-1turn',
+        delay: 0
+      },
+      delay: (el, i) => i * 50,
+      loop: true,
+      loopDelay: 1000,
+      easing: 'easeInOutCirc'
+    });
+  </script>
 </body>
 </html>
